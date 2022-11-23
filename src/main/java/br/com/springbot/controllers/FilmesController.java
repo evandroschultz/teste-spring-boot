@@ -12,7 +12,7 @@ import br.com.springbot.service.ProdutorService;
 import br.com.springbot.vo.Exibicao;
 
 @RestController
-@RequestMapping("/filmes")
+@RequestMapping("/")
 public class FilmesController {
 
     @Autowired
