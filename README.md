@@ -16,11 +16,13 @@ Verbo: POST, adicione um JSON ao "body". Ex:
 {
 	"nome" : "Steven Spielberg"
 }
+
 Verbo: GET, lista todos os produtores.
 Verbo: PUT, use localhost:8080/produtor/{id}, onde ID é o identificador do registro a ser alterado. Adicione um JSON ao corpo. Ex:
 {
 	"nome" : "George P. Cosmatos"
 }
+
 Verbo: DELETE, use localhost:8080/produtor/{id} onde o ID é o identificador do registro a ser excluído.
 Verbo: GET, use localhost:8080/produtor/{id} para buscar o registro referente ao ID informado.
 
