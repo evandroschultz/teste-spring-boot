@@ -1,3 +1,9 @@
+Atualização da nova versão:
+
+-Corrigida a lógica para chegar ao resultado esperado. Adicionada expressão regular no "split" que verifica se os produtores aparecem com um produtor ou como um conjunto de produtores.
+-Adicionada novas dependências para os testes de integração
+-Implementado teste de integração
+
 # teste-spring-boot
  Estudo teste de Spring Boot
 
