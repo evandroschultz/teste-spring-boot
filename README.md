@@ -3,6 +3,7 @@ Atualização da nova versão:
 -Corrigida a lógica para chegar ao resultado esperado. Adicionada expressão regular no "split" que verifica se os produtores aparecem como um único produtor ou como um conjunto de produtores. Em algumas linhas apareceram a virgula e a palavra "AND". Nestes casos, o "split" da forma como havia sido pensado não entegou o resultado correto e adicionou dois produtores em um mesmo registro no BD.
 
 -Adicionada novas dependências para os testes de integração
+
 -Implementado teste de integração
 
 # teste-spring-boot
