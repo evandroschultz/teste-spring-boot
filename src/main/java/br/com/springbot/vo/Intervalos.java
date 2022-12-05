@@ -17,7 +17,8 @@ public class Intervalos {
     private Integer intervalo = 0;
 
     public void calcular(){
-        this.intervalo =  this.anterior - this.proximo;
+        //this.intervalo =  this.anterior - this.proximo;
+        this.intervalo =  this.proximo - this.anterior;
     }
 
 

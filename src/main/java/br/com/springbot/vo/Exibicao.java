@@ -1,5 +1,6 @@
 package br.com.springbot.vo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -14,7 +15,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Exibicao {
 
-    private List min;
-    private List max;
+    private List<Resultado> min = new ArrayList<>();
+    private List<Resultado> max = new ArrayList<>();
+    //private Resultado min = new Resultado();
+    //private Resultado max = new Resultado();
+
+
     
 }

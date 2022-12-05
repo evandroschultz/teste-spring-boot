@@ -95,11 +95,15 @@ public class Inicial {
         String[] filme = dado.split(";");
 
         String nomeProdutores = filme[3];
-        nomeProdutores.replaceAll(" and ", ",");
-        String[] arrProdutores = filme[3].split(",");
+        nomeProdutores = nomeProdutores.replaceAll(" and ", ",");
+        String[] arrProdutores = nomeProdutores.split(",|\\ and ");
 
         for (int i = 0; i < arrProdutores.length; i++) {
-            this.cadProdutor(arrProdutores[i].trim());
+
+            if(arrProdutores[i].trim().trim().length() > 0){
+                this.cadProdutor(arrProdutores[i].trim());
+            }
+                        
         }
 
     }
@@ -157,8 +161,8 @@ public class Inicial {
 
     private void getProdutorFilme(String dado, Filme filme) {
 
-        dado.replaceAll(" and ", ",");
-        String[] arrProdutores = dado.split(",");
+        dado = dado.replaceAll(" and ", ",");
+        String[] arrProdutores = dado.split(",|\\ and ");
 
         for (int i = 0; i < arrProdutores.length; i++) {
             Produtor produtor = lstProdutores.get(arrProdutores[i].trim());

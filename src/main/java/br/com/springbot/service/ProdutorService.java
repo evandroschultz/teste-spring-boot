@@ -117,10 +117,14 @@ public class ProdutorService {
                 Resultado resultado = new Resultado();
                 resultado.setProducer(produtorFilmes.getProdutor().getNome());
                 Intervalos intervalo = (Intervalos) lstIntervalos.next();
-                resultado.setPreviousWin(intervalo.getAnterior());
-                resultado.setFollowingWin(intervalo.getProximo());
-                resultado.setInterval(intervalo.getIntervalo());
-                lstResultado.add(resultado);
+                
+                if (intervalo.getIntervalo() > 0){
+                    resultado.setPreviousWin(intervalo.getAnterior());
+                    resultado.setFollowingWin(intervalo.getProximo());
+                    resultado.setInterval(intervalo.getIntervalo());
+                    lstResultado.add(resultado);
+                    
+                }
             }
 
         }
@@ -137,9 +141,16 @@ public class ProdutorService {
         min.sort(Comparator.comparing(Resultado::getInterval)) ;
         max.sort(Comparator.comparing(Resultado::getInterval).reversed()) ;
         
+
+
+        
         Exibicao exibicao = new Exibicao();
-        exibicao.setMin(min);
-        exibicao.setMax(max);
+        exibicao.getMin().add((Resultado) min.get(0));
+        exibicao.getMax().add((Resultado) max.get(0));
+        //exibicao.setMax(max);
+        //exibicao.setMin((Resultado)min.get(0));
+        //exibicao.setMax((Resultado)max.get(0));
+        
         return exibicao;
     }
 

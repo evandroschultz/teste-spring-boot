@@ -29,10 +29,10 @@ public class ProdutorFilmes {
                 Filme filme = (Filme) listaFilmesVencedores.get(i);
                 Intervalos intervalos = new Intervalos();
 
-                intervalos.setAnterior(filme.getAno());
+                intervalos.setProximo(filme.getAno());
 
                 for (int j = 1; j < listaFilmesVencedores.size(); j++) {
-                    intervalos.setProximo(listaFilmesVencedores.get(j).getAno());
+                    intervalos.setAnterior(listaFilmesVencedores.get(j).getAno());
                 }
 
                 intervalos.calcular();
